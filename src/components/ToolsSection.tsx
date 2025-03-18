@@ -25,16 +25,16 @@ const ToolCard: React.FC<ToolCardProps> = ({ icon, name, className }) => {
 
 const ToolsSection: React.FC = () => {
   const tools = [
-    { name: "Webhooks", icon: <Webhook className="h-10 w-10" /> },
-    { name: "Supabase", icon: <Box className="h-10 w-10" /> },
-    { name: "Clerk", icon: <CircleUser className="h-10 w-10" /> },
-    { name: "Zapier", icon: <Zap className="h-10 w-10" /> },
-    { name: "Census", icon: <LayoutPanelLeft className="h-10 w-10" /> },
-    { name: "Framer", icon: <Framer className="h-10 w-10" /> },
-    { name: "Make", icon: <CircleDashed className="h-10 w-10" /> },
-    { name: "Segment", icon: <FileCode className="h-10 w-10" /> },
-    { name: "Webflow", icon: <Bookmark className="h-10 w-10" /> },
-    { name: "Bubble", icon: <CircleDashed className="h-10 w-10" /> }
+    { name: "Salesforce", icon: <CircleUser className="h-10 w-10" /> },
+    { name: "HubSpot", icon: <Box className="h-10 w-10" /> },
+    { name: "AWS", icon: <Webhook className="h-10 w-10" /> },
+    { name: "Microsoft Office", icon: <FileCode className="h-10 w-10" /> },
+    { name: "Tableau", icon: <LayoutPanelLeft className="h-10 w-10" /> },
+    { name: "Asana", icon: <Zap className="h-10 w-10" /> },
+    { name: "Slack", icon: <Bookmark className="h-10 w-10" /> },
+    { name: "Google Analytics", icon: <CircleDashed className="h-10 w-10" /> },
+    { name: "Zoom", icon: <Framer className="h-10 w-10" /> },
+    { name: "LinkedIn Sales Navigator", icon: <CircleDashed className="h-10 w-10" /> }
   ];
 
   return (
@@ -43,11 +43,9 @@ const ToolsSection: React.FC = () => {
         <div className="flex flex-col items-center text-center space-y-4 mb-12 animate-slideUp">
           <h2 className="text-2xl md:text-3xl font-semibold">Tools & Technologies</h2>
           <p className="text-muted-foreground max-w-[700px]">
-            I have experience working with various tools and technologies that enable efficient product development and integration.
+            I have experience working with various tools and technologies that enable effective account management and client relations.
           </p>
-          <a href="#" className="text-black flex items-center gap-1 mt-2 text-sm hover:underline">
-            See all <span className="text-xs">→</span>
-          </a>
+          {/* "See all" link rimosso come richiesto */}
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

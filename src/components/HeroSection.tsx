@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface HeroSectionProps {
   companyName: string;
@@ -41,13 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             >
               <Play className="h-4 w-4" /> Watch 60-Second Intro
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="gap-2 border-black/10 text-sm font-normal h-10 rounded-md"
-            >
-              View Resume <ArrowRight className="h-4 w-4" />
-            </Button>
+            {/* Pulsante "Download Resume" rimosso come richiesto */}
           </div>
         </div>
       </div>

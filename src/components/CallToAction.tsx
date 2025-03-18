@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { DownloadIcon, MailIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 
 interface CallToActionProps {
   candidateName: string;
@@ -23,16 +23,14 @@ const CallToAction: React.FC<CallToActionProps> = ({
           </h2>
           <p className="text-muted-foreground text-sm">
             I'm excited about the opportunity to join {companyName} as a {jobTitle}.
-            Let's connect to discuss how my skills and experiences align with your needs.
+            Let's connect to discuss how my account management expertise can drive growth and success for your team.
           </p>
           
           <div className="flex flex-col sm:flex-row w-full max-w-md gap-4 mt-4">
             <Button className="flex-1 gap-2 bg-black hover:bg-black/90 text-white rounded-md text-sm font-normal">
               <MailIcon className="h-4 w-4" /> Contact Me
             </Button>
-            <Button variant="outline" className="flex-1 gap-2 border-black/10 text-sm font-normal">
-              <DownloadIcon className="h-4 w-4" /> Download Resume
-            </Button>
+            {/* Pulsante "Download Resume" rimosso come richiesto */}
           </div>
           
           <div className="pt-6 text-xs text-muted-foreground">

@@ -9,83 +9,79 @@ import ToolsSection from "@/components/ToolsSection";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import VideoPlayer from "@/components/VideoPlayer";
-import { Award, BarChart, Code, Rocket, Users } from "lucide-react";
+import { Award, BarChart, BriefcaseIcon, CalendarIcon, Users } from "lucide-react";
 
 const Index = () => {
-  // This would be dynamically populated in a real implementation
+  // Dati aggiornati per la posizione di Account Manager presso Amazon
   const candidateData = {
     name: "Alex Johnson",
-    title: "Senior Product Manager",
+    title: "Senior Account Manager",
     company: {
-      name: "TechInnovate",
-      role: "Product Manager"
+      name: "Amazon",
+      role: "Account Manager"
     }
   };
 
   // State for video modal
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  // Mock data for achievements
+  // Achievements aggiornati per Account Manager
   const achievements = [
     {
-      icon: <Rocket className="h-5 w-5" />,
-      title: "Product Launch",
-      description: "Led the successful launch of 4 major product features, resulting in a 35% increase in user engagement and 22% boost in revenue."
+      icon: <BriefcaseIcon className="h-5 w-5" />,
+      title: "Client Portfolio Growth",
+      description: "Expanded client portfolio by 45% in 12 months, adding over $3.2M in new revenue through strategic relationship management and needs assessment."
     },
     {
       icon: <Users className="h-5 w-5" />,
       title: "Team Leadership",
-      description: "Managed cross-functional teams of 8+ members, fostering collaboration between design, engineering, and marketing departments."
+      description: "Led a team of 6 account specialists, achieving 115% of quarterly targets for 8 consecutive quarters through effective coaching and mentorship."
     },
     {
       icon: <BarChart className="h-5 w-5" />,
       title: "Revenue Growth",
-      description: "Implemented strategic initiatives that drove a 42% year-over-year growth in product revenue while reducing costs by 18%."
+      description: "Increased average client spend by 32% through strategic upselling and cross-selling of complementary Amazon services and solutions."
     },
     {
-      icon: <Code className="h-5 w-5" />,
-      title: "Technical Integration",
-      description: "Oversaw the integration of 3 critical APIs, improving data flow and reducing system bottlenecks by 65%."
+      icon: <CalendarIcon className="h-5 w-5" />,
+      title: "Client Retention",
+      description: "Maintained a 94% client retention rate through proactive relationship management and regular strategic business reviews."
     },
     {
       icon: <Award className="h-5 w-5" />,
-      title: "Award-Winning Solutions",
-      description: "Developed an innovative approach to user onboarding that won industry recognition and increased conversion by 28%."
+      title: "Award-Winning Performance",
+      description: "Recognized as 'Account Manager of the Year' for consistently exceeding targets and receiving exceptional client satisfaction scores."
     }
   ];
 
-  // Mock data for experience
+  // Experiences aggiornate per Account Manager
   const experiences = [
     {
-      company: "GrowthTech Solutions",
-      position: "Senior Product Manager",
+      company: "Global Solutions Inc.",
+      position: "Senior Account Manager",
       period: "Jan 2020 - Present",
-      description: "Led the development and launch of the company's flagship product, resulting in $2.4M in new revenue. Managed a team of 6 product specialists and collaborated closely with engineering and design teams.",
-      skills: ["Product Strategy", "Agile", "User Research", "Roadmapping", "Analytics"]
+      description: "Managed a portfolio of 28 enterprise clients with combined annual revenue of $12M. Developed and executed account growth strategies resulting in 35% increased revenue within existing accounts.",
+      skills: ["Account Management", "Sales Strategy", "Client Relations", "Business Development", "Negotiations"]
     },
     {
-      company: "InnovateCorp",
-      position: "Product Manager",
+      company: "Tech Partnerships Ltd.",
+      position: "Account Manager",
       period: "Jun 2017 - Dec 2019",
-      description: "Spearheaded the redesign of core user features, increasing customer satisfaction scores by 42%. Conducted comprehensive market analysis to identify key opportunities for product enhancement.",
-      skills: ["Product Development", "UX Design", "A/B Testing", "Market Research", "Scrum"]
+      description: "Oversaw 15 mid-market accounts totaling $5.8M in annual revenue. Implemented customer success initiatives that improved retention by 22% and increased customer satisfaction scores by 18%.",
+      skills: ["Key Account Management", "Customer Success", "Relationship Building", "Problem Solving", "Strategic Planning"]
     },
     {
-      company: "TechStart Inc.",
-      position: "Associate Product Manager",
+      company: "Business Growth Partners",
+      position: "Account Executive",
       period: "Aug 2015 - May 2017",
-      description: "Assisted in the development of product requirements and worked with engineering teams to ensure successful implementation. Analyzed user feedback to inform product decisions.",
-      skills: ["Requirements Gathering", "User Stories", "Prototyping", "Data Analysis"]
+      description: "Developed and maintained relationships with 12 SMB clients. Consistently exceeded monthly sales targets by 18% through effective needs analysis and solution selling.",
+      skills: ["Sales Execution", "Client Communication", "Needs Assessment", "Solution Selling", "CRM Management"]
     }
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header 
-        companyName={candidateData.company.name}
-        jobTitle={candidateData.company.role}
-        candidateName={candidateData.name}
-      />
+      <Header />
       
       <main className="flex-1">
         <div id="hero">
