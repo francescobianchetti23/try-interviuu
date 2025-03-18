@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Webhook, Framer, Bookmark, Zap, CircleUser, LayoutPanelLeft, CircleDashed, FileCode, Box } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ToolCardProps {
   icon: React.ReactNode;
@@ -12,7 +13,7 @@ interface ToolCardProps {
 
 const ToolCard: React.FC<ToolCardProps> = ({ icon, name, className }) => {
   return (
-    <Card className={cn("border border-border/20 hover:border-border/50 transition-colors", className)}>
+    <Card className={cn("border border-border/20 hover:border-border/50 transition-colors min-w-[160px] md:min-w-[180px]", className)}>
       <CardContent className="flex flex-col items-center justify-center p-6 text-center">
         <div className="text-gray-500 mb-3">
           {icon}
@@ -24,6 +25,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ icon, name, className }) => {
 };
 
 const ToolsSection: React.FC = () => {
+  const isMobile = useIsMobile();
   const tools = [
     { name: "Salesforce", icon: <CircleUser className="h-10 w-10" /> },
     { name: "HubSpot", icon: <Box className="h-10 w-10" /> },
@@ -45,13 +47,14 @@ const ToolsSection: React.FC = () => {
           <p className="text-muted-foreground max-w-[700px]">
             I have experience working with various tools and technologies that enable effective account management and client relations.
           </p>
-          {/* "See all" link rimosso come richiesto */}
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {tools.map((tool, index) => (
-            <ToolCard key={index} icon={tool.icon} name={tool.name} />
-          ))}
+        <div className="scrollable-tools-container overflow-x-auto pb-4 -mx-4 px-4">
+          <div className="flex space-x-4 w-max animate-slideUp">
+            {tools.map((tool, index) => (
+              <ToolCard key={index} icon={tool.icon} name={tool.name} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

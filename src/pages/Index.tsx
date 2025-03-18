@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
@@ -22,8 +23,9 @@ const Index = () => {
     }
   };
 
-  // State for video modal
+  // State for video and audio modals
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isAudioOpen, setIsAudioOpen] = useState(false);
 
   // Achievements aggiornati per Account Manager
   const achievements = [
@@ -95,6 +97,7 @@ const Index = () => {
             candidateName={candidateData.name}
             candidateTitle={candidateData.title}
             onWatchVideo={() => setIsVideoOpen(true)}
+            onListenAudio={() => setIsAudioOpen(true)}
           />
         </div>
         
@@ -132,6 +135,15 @@ const Index = () => {
         isOpen={isVideoOpen}
         setIsOpen={setIsVideoOpen}
         candidateName={candidateData.name}
+      />
+      
+      {/* Per ora utilizziamo lo stesso componente VideoPlayer per l'audio, 
+          in una implementazione reale si potrebbe creare un componente AudioPlayer dedicato */}
+      <VideoPlayer 
+        isOpen={isAudioOpen}
+        setIsOpen={setIsAudioOpen}
+        candidateName={candidateData.name}
+        audioOnly={true}
       />
     </div>
   );

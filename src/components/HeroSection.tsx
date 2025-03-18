@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Play, Volume2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroSectionProps {
@@ -11,6 +11,7 @@ interface HeroSectionProps {
   candidateName: string;
   candidateTitle: string;
   onWatchVideo: () => void;
+  onListenAudio?: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -20,6 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   candidateName,
   candidateTitle,
   onWatchVideo,
+  onListenAudio = () => {},
 }) => {
   const isMobile = useIsMobile();
   
@@ -58,6 +60,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               onClick={onWatchVideo}
             >
               <Play className="h-4 w-4" /> Watch 60-Second Intro
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="gap-2 border-gray-300 hover:bg-gray-100 text-gray-800 rounded-md h-10 px-5 py-2 text-sm font-normal"
+              onClick={onListenAudio}
+            >
+              <Volume2 className="h-4 w-4" /> Listen to Intro
             </Button>
           </div>
         </div>

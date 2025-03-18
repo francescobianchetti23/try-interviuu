@@ -125,3 +125,27 @@
 .animate-slideUp {
   animation: slideUp 0.7s ease-out forwards;
 }
+
+/* Styling for horizontal scrolling tools */
+.scrollable-tools-container {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.scrollable-tools-container::-webkit-scrollbar {
+  height: 6px;
+  background-color: transparent;
+}
+
+.scrollable-tools-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+/* Mobile adjustments for tools */
+@media (max-width: 768px) {
+  .scrollable-tools-container > div > div {
+    width: 160px; /* Adjust width for 3 elements per view */
+  }
+}
