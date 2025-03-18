@@ -1,7 +1,6 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { MailIcon, PhoneIcon, CalendarIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
@@ -39,21 +38,6 @@ const CallToAction: React.FC<CallToActionProps> = ({
                 companyName
               )}
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              I'm excited about the opportunity to join{" "}
-              {companyLogo ? (
-                <span className="inline-flex items-center">
-                  <img 
-                    src={companyLogo} 
-                    alt={companyName} 
-                    className={cn("mx-1", isMobile ? "h-4" : "h-5")}
-                  />
-                </span>
-              ) : (
-                companyName
-              )}{" "}
-              as a {jobTitle}. Let's connect to discuss how my account management expertise can drive growth and success for your team.
-            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
@@ -82,27 +66,6 @@ const CallToAction: React.FC<CallToActionProps> = ({
                 <span className="font-medium group-hover:text-primary transition-colors">+1 (123) 456-7890</span>
               </div>
             </a>
-          </div>
-          
-          <div className="w-full max-w-md mt-6">
-            <a href="mailto:alex.johnson@example.com">
-              <Button className="w-full h-12 gap-2 bg-black hover:bg-black/90 text-white font-medium transition-all duration-300 hover:scale-[1.02] group">
-                <MailIcon className="h-4 w-4 group-hover:scale-110 transition-transform" /> 
-                <span>Schedule a conversation</span>
-              </Button>
-            </a>
-            
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <a 
-                href="https://calendly.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <CalendarIcon className="h-4 w-4" />
-                <span>Check availability</span>
-              </a>
-            </div>
           </div>
           
           <div className="pt-8 text-xs text-muted-foreground max-w-lg">
