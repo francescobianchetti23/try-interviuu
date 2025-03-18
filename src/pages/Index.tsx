@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -86,26 +87,36 @@ const Index = () => {
       />
       
       <main className="flex-1">
-        <HeroSection 
-          companyName={candidateData.company.name}
-          jobTitle={candidateData.company.role}
-          candidateName={candidateData.name}
-          candidateTitle={candidateData.title}
-          onWatchVideo={() => setIsVideoOpen(true)}
-        />
+        <div id="hero">
+          <HeroSection 
+            companyName={candidateData.company.name}
+            jobTitle={candidateData.company.role}
+            candidateName={candidateData.name}
+            candidateTitle={candidateData.title}
+            onWatchVideo={() => setIsVideoOpen(true)}
+          />
+        </div>
         
-        <AchievementsSection 
-          achievements={achievements} 
-          companyName={candidateData.company.name}
-        />
+        <Navigation />
         
-        <ExperienceSection experiences={experiences} />
+        <div id="achievements">
+          <AchievementsSection 
+            achievements={achievements} 
+            companyName={candidateData.company.name}
+          />
+        </div>
         
-        <CallToAction
-          candidateName={candidateData.name}
-          jobTitle={candidateData.company.role}
-          companyName={candidateData.company.name}
-        />
+        <div id="experience">
+          <ExperienceSection experiences={experiences} />
+        </div>
+        
+        <div id="cta">
+          <CallToAction
+            candidateName={candidateData.name}
+            jobTitle={candidateData.company.role}
+            companyName={candidateData.company.name}
+          />
+        </div>
       </main>
       
       <Footer candidateName={candidateData.name} />
