@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
@@ -37,9 +36,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             ) : companyName}
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight max-w-3xl leading-tight">
-            Hi, I'm {candidateName}
+            <span className="text-2xl md:text-3xl lg:text-5xl font-normal">Hi, </span>I'm {candidateName}
             <br />
-            <span className="text-black font-bold">Your new {jobTitle}</span>
+            <span className="text-2xl md:text-3xl lg:text-5xl font-normal">Your new </span><span className="text-black font-bold">{jobTitle}</span>
           </h1>
           <p className="text-muted-foreground text-sm md:text-lg max-w-[700px]">
             {candidateTitle} with a proven track record of delivering exceptional results,
