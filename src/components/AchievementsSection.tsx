@@ -12,11 +12,13 @@ interface Achievement {
 interface AchievementsSectionProps {
   achievements: Achievement[];
   companyName: string;
+  companyLogo?: string;
 }
 
 const AchievementsSection: React.FC<AchievementsSectionProps> = ({
   achievements,
   companyName,
+  companyLogo,
 }) => {
   return (
     <section className="py-16 bg-secondary/50">
@@ -24,7 +26,15 @@ const AchievementsSection: React.FC<AchievementsSectionProps> = ({
         <div className="flex flex-col items-center text-center space-y-4 mb-12 animate-slideUp">
           <h2 className="text-2xl md:text-3xl font-semibold">
             Why I'm The Perfect Fit For{" "}
-            <span className="text-black font-bold">{companyName}</span>
+            {companyLogo ? (
+              <img 
+                src={companyLogo} 
+                alt={companyName} 
+                className="h-6 inline-block mx-1" 
+              />
+            ) : (
+              <span className="text-black font-bold">{companyName}</span>
+            )}
           </h2>
           <p className="text-muted-foreground max-w-[700px]">
             My skills and experiences align perfectly with what you're looking for.

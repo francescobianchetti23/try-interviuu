@@ -18,7 +18,8 @@ const Index = () => {
     title: "Senior Account Manager",
     company: {
       name: "Amazon",
-      role: "Account Manager"
+      role: "Account Manager",
+      logo: "https://cdn.brandfetch.io/amazon.com/w/512/h/154/logo?c=1idzAwSdIHHayr0QJdL"
     }
   };
 
@@ -87,6 +88,7 @@ const Index = () => {
         <div id="hero">
           <HeroSection 
             companyName={candidateData.company.name}
+            companyLogo={candidateData.company.logo}
             jobTitle={candidateData.company.role}
             candidateName={candidateData.name}
             candidateTitle={candidateData.title}
@@ -100,6 +102,7 @@ const Index = () => {
           <AchievementsSection 
             achievements={achievements} 
             companyName={candidateData.company.name}
+            companyLogo={candidateData.company.logo}
           />
         </div>
         
@@ -114,6 +117,7 @@ const Index = () => {
             candidateName={candidateData.name}
             jobTitle={candidateData.company.role}
             companyName={candidateData.company.name}
+            companyLogo={candidateData.company.logo}
           />
         </div>
       </main>

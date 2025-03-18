@@ -5,6 +5,7 @@ import { Play } from "lucide-react";
 
 interface HeroSectionProps {
   companyName: string;
+  companyLogo?: string;
   jobTitle: string;
   candidateName: string;
   candidateTitle: string;
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   companyName,
+  companyLogo,
   jobTitle,
   candidateName,
   candidateTitle,
@@ -23,7 +25,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-6 mb-12 max-w-3xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full border border-black/10 bg-secondary text-xs font-medium mb-2">
-            Perfect match for {companyName}
+            Perfect match for {companyLogo ? (
+              <img 
+                src={companyLogo} 
+                alt={companyName} 
+                className="h-4 inline-block ml-1" 
+              />
+            ) : companyName}
           </div>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl leading-tight">
             Hi, I'm {candidateName} — Your Ideal{" "}
@@ -31,7 +39,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </h1>
           <p className="text-muted-foreground md:text-lg max-w-[700px]">
             {candidateTitle} with a proven track record of delivering exceptional results,
-            perfectly aligned with {companyName}'s mission and values.
+            perfectly aligned with {companyLogo ? (
+              <img 
+                src={companyLogo} 
+                alt={companyName} 
+                className="h-4 inline-block mx-1" 
+              />
+            ) : companyName}'s mission and values.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Button 
@@ -41,7 +55,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             >
               <Play className="h-4 w-4" /> Watch 60-Second Intro
             </Button>
-            {/* Pulsante "Download Resume" rimosso come richiesto */}
           </div>
         </div>
       </div>
