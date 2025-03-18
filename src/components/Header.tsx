@@ -18,24 +18,24 @@ const Header: React.FC<HeaderProps> = ({
   className
 }) => {
   return (
-    <header className={cn("w-full py-6 border-b", className)}>
+    <header className={cn("w-full py-4 border-b border-border/30", className)}>
       <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-md bg-brand-purple flex items-center justify-center text-white font-bold">
+          <div className="h-7 w-7 rounded-sm bg-black flex items-center justify-center text-white font-medium text-xs">
             RL
           </div>
-          <h3 className="font-semibold text-lg">ResumeLand</h3>
+          <h3 className="font-medium text-sm">ResumeLand</h3>
         </div>
         
         <div className="flex items-center gap-2">
-          <p className="text-sm text-muted-foreground mr-2">
+          <p className="text-xs text-muted-foreground mr-2">
             {candidateName}'s application for {jobTitle}
           </p>
-          <Button variant="outline" size="sm" className="hidden md:flex">
+          <Button variant="outline" size="sm" className="hidden md:flex text-xs h-8 font-normal">
             Contact
           </Button>
-          <Button size="sm" className="gap-1">
-            Hire Me <ArrowRight className="h-4 w-4" />
+          <Button size="sm" className="gap-1 text-xs font-normal h-8 rounded-md bg-black text-white hover:bg-black/90">
+            Hire Me <ArrowRight className="h-3 w-3" />
           </Button>
         </div>
       </div>

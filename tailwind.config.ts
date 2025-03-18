@@ -64,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					purple: '#9b87f5',
-					dark: '#1A1F2C',
-					light: '#F6F7F9',
-					accent: '#D6BCFA'
+					purple: '#000000',  // Cambiato in nero
+					dark: '#000000',    // Nero come colore principale
+					light: '#FAFAFA',   // Grigio chiaro per lo sfondo
+					accent: '#eaeaea'   // Grigio per accent
 				}
 			},
 			borderRadius: {
