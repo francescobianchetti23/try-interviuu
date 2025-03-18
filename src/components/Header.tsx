@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   className
 }) => {
   return (
-    <header className={cn("w-full py-4 border-b border-border/30", className)}>
+    <header className={cn("w-full py-6", className)}>
       <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-sm bg-black flex items-center justify-center text-white font-medium text-xs">

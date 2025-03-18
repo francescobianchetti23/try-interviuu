@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import ToolsSection from "@/components/ToolsSection";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import VideoPlayer from "@/components/VideoPlayer";
@@ -105,6 +106,8 @@ const Index = () => {
             companyName={candidateData.company.name}
           />
         </div>
+        
+        <ToolsSection />
         
         <div id="experience">
           <ExperienceSection experiences={experiences} />

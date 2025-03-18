@@ -28,15 +28,15 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experiences }) =>
           </p>
         </div>
         
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border border-border/20 rounded-lg shadow-sm">
+            <Card key={index} className="border border-border/20 rounded-lg shadow-sm h-full">
               <CardHeader className="pb-2">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div className="flex flex-col gap-2">
                   <div>
                     <div className="flex items-center gap-2">
                       <BriefcaseIcon className="h-4 w-4 text-black" />
-                      <CardTitle className="text-xl font-medium">{exp.position}</CardTitle>
+                      <CardTitle className="text-lg font-medium">{exp.position}</CardTitle>
                     </div>
                     <p className="text-muted-foreground text-sm">{exp.company}</p>
                   </div>
