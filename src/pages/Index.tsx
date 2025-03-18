@@ -61,21 +61,24 @@ const Index = () => {
       position: "Senior Account Manager",
       period: "Jan 2020 - Present",
       description: "Managed a portfolio of 28 enterprise clients with combined annual revenue of $12M. Developed and executed account growth strategies resulting in 35% increased revenue within existing accounts.",
-      skills: ["Account Management", "Sales Strategy", "Client Relations", "Business Development", "Negotiations"]
+      skills: ["Account Management", "Sales Strategy", "Client Relations", "Business Development", "Negotiations"],
+      logo: "https://placehold.co/200x80/f1f5f9/000000?text=Global+Solutions"
     },
     {
       company: "Tech Partnerships Ltd.",
       position: "Account Manager",
       period: "Jun 2017 - Dec 2019",
       description: "Oversaw 15 mid-market accounts totaling $5.8M in annual revenue. Implemented customer success initiatives that improved retention by 22% and increased customer satisfaction scores by 18%.",
-      skills: ["Key Account Management", "Customer Success", "Relationship Building", "Problem Solving", "Strategic Planning"]
+      skills: ["Key Account Management", "Customer Success", "Relationship Building", "Problem Solving", "Strategic Planning"],
+      logo: "https://placehold.co/200x80/f1f5f9/000000?text=Tech+Partnerships"
     },
     {
       company: "Business Growth Partners",
       position: "Account Executive",
       period: "Aug 2015 - May 2017",
       description: "Developed and maintained relationships with 12 SMB clients. Consistently exceeded monthly sales targets by 18% through effective needs analysis and solution selling.",
-      skills: ["Sales Execution", "Client Communication", "Needs Assessment", "Solution Selling", "CRM Management"]
+      skills: ["Sales Execution", "Client Communication", "Needs Assessment", "Solution Selling", "CRM Management"],
+      logo: "https://placehold.co/200x80/f1f5f9/000000?text=BGP"
     }
   ];
 

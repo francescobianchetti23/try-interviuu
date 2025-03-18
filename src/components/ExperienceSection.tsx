@@ -2,7 +2,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BriefcaseIcon, CalendarIcon } from "lucide-react";
+import { BriefcaseIcon, CalendarIcon, MailIcon, PhoneIcon } from "lucide-react";
 
 interface Experience {
   company: string;
@@ -10,6 +10,7 @@ interface Experience {
   period: string;
   description: string;
   skills: string[];
+  logo?: string;
 }
 
 interface ExperienceSectionProps {
@@ -33,12 +34,19 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experiences }) =>
             <Card key={index} className="border border-border/20 rounded-lg shadow-sm h-full">
               <CardHeader className="pb-2">
                 <div className="flex flex-col gap-2">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <BriefcaseIcon className="h-4 w-4 text-black" />
-                      <CardTitle className="text-lg font-medium">{exp.position}</CardTitle>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <BriefcaseIcon className="h-4 w-4 text-black" />
+                        <CardTitle className="text-lg font-medium">{exp.position}</CardTitle>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <p className="text-muted-foreground text-sm">{exp.company}</p>
+                        {exp.logo && (
+                          <img src={exp.logo} alt={exp.company} className="h-4 object-contain" />
+                        )}
+                      </div>
                     </div>
-                    <p className="text-muted-foreground text-sm">{exp.company}</p>
                   </div>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
                     <CalendarIcon className="h-3 w-3" />
@@ -58,6 +66,24 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experiences }) =>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-16 flex flex-col items-center justify-center text-center">
+          <h3 className="text-xl md:text-2xl font-semibold mb-6">Contact Information</h3>
+          <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+            <div className="flex items-center gap-2">
+              <MailIcon className="h-5 w-5 text-black" />
+              <a href="mailto:alex.johnson@example.com" className="text-sm hover:underline">
+                alex.johnson@example.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <PhoneIcon className="h-5 w-5 text-black" />
+              <a href="tel:+11234567890" className="text-sm hover:underline">
+                +1 (123) 456-7890
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
