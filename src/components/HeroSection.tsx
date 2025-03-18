@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroSectionProps {
   companyName: string;
@@ -20,34 +21,36 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   candidateTitle,
   onWatchVideo,
 }) => {
+  const isMobile = useIsMobile();
+  
   return (
-    <section className="py-24 md:py-32 w-full animate-fadeIn">
+    <section className="py-16 md:py-24 w-full animate-fadeIn">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-6 mb-12 max-w-3xl mx-auto">
+        <div className="flex flex-col items-center text-center space-y-4 md:space-y-6 mb-8 md:mb-12 max-w-3xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full border border-black/10 bg-secondary text-xs font-medium mb-2">
             Perfect match for {companyLogo ? (
               <img 
                 src={companyLogo} 
                 alt={companyName} 
-                className="h-4 inline-block ml-1" 
+                className={`inline-block ml-1 ${isMobile ? 'h-3' : 'h-4'}`}
               />
             ) : companyName}
           </div>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight max-w-3xl leading-tight">
             Hi, I'm {candidateName} — Your Ideal{" "}
             <span className="text-black font-bold">{jobTitle}</span>
           </h1>
-          <p className="text-muted-foreground md:text-lg max-w-[700px]">
+          <p className="text-muted-foreground text-sm md:text-lg max-w-[700px]">
             {candidateTitle} with a proven track record of delivering exceptional results,
             perfectly aligned with {companyLogo ? (
               <img 
                 src={companyLogo} 
                 alt={companyName} 
-                className="h-4 inline-block mx-1" 
+                className={`inline-block mx-1 ${isMobile ? 'h-3' : 'h-4'}`}
               />
             ) : companyName}'s mission and values.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button 
               size="lg" 
               className="gap-2 bg-black hover:bg-black/90 text-white rounded-md h-10 px-5 py-2 text-sm font-normal"

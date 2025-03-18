@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
@@ -106,10 +105,12 @@ const Index = () => {
           />
         </div>
         
-        <ToolsSection />
-        
         <div id="experience">
           <ExperienceSection experiences={experiences} />
+        </div>
+        
+        <div id="tools">
+          <ToolsSection />
         </div>
         
         <div id="cta">
