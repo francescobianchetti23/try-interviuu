@@ -37,8 +37,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             ) : companyName}
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight max-w-3xl leading-tight">
-            Hi, I'm {candidateName} — Your Ideal{" "}
-            <span className="text-black font-bold">{jobTitle}</span>
+            Hi, I'm {candidateName}
+            <br />
+            <span className="text-black font-bold">Your new {jobTitle}</span>
           </h1>
           <p className="text-muted-foreground text-sm md:text-lg max-w-[700px]">
             {candidateTitle} with a proven track record of delivering exceptional results,
